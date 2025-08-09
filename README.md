@@ -17,7 +17,9 @@ So it has this part covered.
 
 ## System Prompt
 
-If you set the env var `GEMINI_SYSTEM_MD=1` then `gemini-cli` will obtain its system prompt from `.gemini/system.md`.
+gemini-cli's default system prompt instructs it to be a coding agent, and its system of GEMINI.md files let you customize its coding agent abilities.
+
+However, you can also provide your own system prompt. If you set the env var `GEMINI_SYSTEM_MD=1` then gemini-cli will obtain its system prompt from `.gemini/system.md`.
 
 To see an example:
 
@@ -26,7 +28,7 @@ cd system_prompt
 GEMINI_SYSTEM_MD=1 gemini
 ```
 
-`gemini-cli` now talks like a pirate!
+gemini-cli now talks like a pirate!
 
 ## Planning Tool
 
