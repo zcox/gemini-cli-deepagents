@@ -1,3 +1,4 @@
 .obsidian/
 .venv/
 .DS_Store
+sqlite/test.db

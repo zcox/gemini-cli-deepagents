@@ -1,0 +1,8 @@
+{
+  "name": "sqlite_schema",
+  "description": "Get the schema of the sqlite database.",
+  "parameters": {
+    "type": "object",
+    "properties": {}
+  }
+}

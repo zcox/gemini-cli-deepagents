@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Support Python tools
+source .venv/bin/activate
+
+# This script is called with the tool name as first argument, and tool input to stdin
+TOOL="$1"
+INPUT=$(cat)
+
+# Likewise, we call each tool as a script with input sent to stdin
+echo "$INPUT" | "bin/tools/$TOOL"

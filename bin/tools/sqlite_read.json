@@ -1,0 +1,14 @@
+{
+  "name": "sqlite_read",
+  "description": "Execute a SQL read query against the sqlite database. The query should only be a read statement (SELECT). Multiple read operations can execute concurrently.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "The SQL read query to execute."
+      }
+    },
+    "required": ["query"]
+  }
+}

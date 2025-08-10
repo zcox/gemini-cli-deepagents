@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+DB_PATH="sqlite/test.db"
+
+# This tool's input is a json object sent to stdin
+INPUT=$(cat)
+
+QUERY=$(echo "$INPUT" | jq -r .query)
+
+sqlite3 --readonly "$DB_PATH" "$QUERY"

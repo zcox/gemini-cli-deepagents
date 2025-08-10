@@ -1,0 +1,14 @@
+{
+  "name": "sqlite_write",
+  "description": "Execute a SQL write query against the sqlite database. The query can only be a write (INSERT, UPDATE, DELETE, DROP, etc). Only one write operation can run at a time; multiple parallel writes will fail with a database locked error. Only execute one write at a time (sequentially), or batch multiple writes into a single query. Since this operation modifies the database, be very careful and very confident when you call this tool.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "The SQL write query to execute."
+      }
+    },
+    "required": ["query"]
+  }
+}
