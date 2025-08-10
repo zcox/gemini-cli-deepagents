@@ -47,3 +47,13 @@ While gemini-cli seems to plan just fine with this approach, it should be simple
 gemini-cli is most lacking in this area. While there are [plans to build subagents](https://github.com/google-gemini/gemini-cli/issues/3132), currently gemini-cli does not support subagents directly.
 
 One possible hack might be a custom tool that runs `gemini -p "instructions for subagent"`.
+
+## sqlite3 Tools
+
+While not formally a part of "deep agents", this repo also provides gemini-cli a few custom tools for working with sqlite3, a local SQL database.
+
+If a deep agent has access to a file system, shouldn't it also have access to a SQL database?
+
+GC was also very helpful in actually building these custom tools, using the info in GEMINI.md.
+
+One fun use of sqlite is getting GC to build the DB for a blog system, populate it with data, and then display a simple blog app in the terminal.
