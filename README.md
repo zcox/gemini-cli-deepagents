@@ -62,7 +62,7 @@ One fun use of sqlite is getting GC to build the DB for a blog system, populate 
 
 If an agent can do something, it can be tricked into doing it. [Simon Willison’s Lethal Trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) is important to consider for any deep agent.
 
-GC (just like Claude Code and others) has access to your file system and can run shell commands, which pretty much ticks the boxes for private data access and external communication ability. Pay attention to those user confirmation prompts on tool calls.
+GC (just like Claude Code and others) has access to your file system and can run shell commands, which pretty much ticks the boxes for private data access and external communication ability. Pay attention to those user confirmation prompts on tool calls. And add MCP servers with care.
 
 What about untrusted content? As soon as you run `gemini`, any of the files it that dir can contain prompt injections. Maybe think twice about running that in some random github repo you cloned (including this one), or use a sandbox. Aside from that, like Simon says:
 
