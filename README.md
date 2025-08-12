@@ -57,3 +57,13 @@ If a deep agent has access to a file system, shouldn't it also have access to a 
 GC was also very helpful in actually building these custom tools, using the info in GEMINI.md.
 
 One fun use of sqlite is getting GC to build the DB for a blog system, populate it with data, and then display a simple blog app in the terminal.
+
+## Security
+
+If an agent can do something, it can be tricked into doing it. [Simon Willison’s Lethal Trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) is important to consider for any deep agent.
+
+GC (just like Claude Code and others) has access to your file system and can run shell commands, which pretty much ticks the boxes for private data access and external communication ability. Pay attention to those user confirmation prompts on tool calls.
+
+What about untrusted content? As soon as you run `gemini`, any of the files it that dir can contain prompt injections. Maybe think twice about running that in some random github repo you cloned (including this one), or use a sandbox. Aside from that, like Simon says:
+
+> Any time you ask an LLM system to summarize a web page, read an email, process a document or even look at an image there’s a chance that the content you are exposing it to might contain additional instructions which cause it to do something you didn’t intend.
