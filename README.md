@@ -8,7 +8,7 @@ Deep agents consist of:
 - File system
 
 While [gemini-cli](https://github.com/google-gemini/gemini-cli) is instructed by default to be a coding agent, it can be customized to be some other kind of deep agent.
-Let's see how to turn gemini-cli into a deep agent.
+Let's see how to turn gemini-cli into a general deep agent.
 
 ## File System
 
@@ -17,7 +17,7 @@ So it has this part covered.
 
 ## System Prompt
 
-gemini-cli's default system prompt instructs it to be a coding agent, and its system of GEMINI.md files let you customize its coding agent abilities.
+gemini-cli's [default system prompt](https://github.com/google-gemini/gemini-cli/blob/main/packages/core/src/core/prompts.ts) instructs it to be a coding agent, and its system of GEMINI.md files let you customize its coding agent abilities.
 
 However, you can also provide your own system prompt. If you set the env var `GEMINI_SYSTEM_MD=1` then gemini-cli will obtain its system prompt from `.gemini/system.md`.
 
@@ -40,7 +40,7 @@ gemini-cli does not appear to use todo lists for planning; instead, its system p
 3. implement
 4. verify
 
-While gemini-cli seems to plan just fine with this approach, it was simple enough to implement a basic todo list tool as a [custom tool](https://github.com/google-gemini/gemini-cli/blob/main/docs/core/tools-api.md#extending-with-custom-tools). See `bin/tools/write_todos`. It's initially basically a copy of the LangChain deepagents todos tool. GC is happy to use it when you explicitly talk about todos, but doesn't seem to use it when planning its own work. It could probably instructed to do so more explicitly via GEMINI.md.
+While gemini-cli seems to plan just fine with this approach, it was simple enough to implement a basic todo list tool as a [custom tool](https://github.com/google-gemini/gemini-cli/blob/main/docs/core/tools-api.md#extending-with-custom-tools). See `bin/tools/write_todos`. It's initially basically a copy of the LangChain deepagents todos tool. GC is happy to use it when you explicitly talk about todos, but doesn't seem to use it when planning its own work. It could probably be instructed to do so more explicitly via GEMINI.md.
 
 ## Sub Agents
 
