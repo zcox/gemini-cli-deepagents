@@ -40,7 +40,7 @@ gemini-cli does not appear to use todo lists for planning; instead, its system p
 3. implement
 4. verify
 
-While gemini-cli seems to plan just fine with this approach, it should be simple enough to implement a basic todo list tool as a [custom tool](https://github.com/google-gemini/gemini-cli/blob/main/docs/core/tools-api.md#extending-with-custom-tools).
+While gemini-cli seems to plan just fine with this approach, it was simple enough to implement a basic todo list tool as a [custom tool](https://github.com/google-gemini/gemini-cli/blob/main/docs/core/tools-api.md#extending-with-custom-tools). See `bin/tools/write_todos`. It's initially basically a copy of the LangChain deepagents todos tool. GC is happy to use it when you explicitly talk about todos, but doesn't seem to use it when planning its own work. It could probably instructed to do so more explicitly via GEMINI.md.
 
 ## Sub Agents
 
