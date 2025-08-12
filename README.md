@@ -44,7 +44,7 @@ While gemini-cli seems to plan just fine with this approach, it should be simple
 
 ## Sub Agents
 
-gemini-cli is most lacking in this area. While there are [plans to build subagents](https://github.com/google-gemini/gemini-cli/issues/3132), currently gemini-cli does not support subagents directly.
+gemini-cli is most lacking in this area. While there are [plans to build subagents](https://github.com/google-gemini/gemini-cli/issues/3132), and some [initial progress](https://github.com/google-gemini/gemini-cli/pull/1805), currently gemini-cli does not support subagents directly.
 
 One possible hack might be a custom tool that runs `gemini -p "instructions for subagent"`.
 
